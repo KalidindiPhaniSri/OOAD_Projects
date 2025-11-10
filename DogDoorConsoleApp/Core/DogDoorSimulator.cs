@@ -6,7 +6,6 @@ namespace DogDoorConsoleApp.Core
     {
         public void Start()
         {
-            Console.WriteLine("OM");
             DogDoor door = new();
             door.AddAllowedBarks(new Bark("rowlf"));
             door.AddAllowedBarks(new Bark("rooowlf"));
