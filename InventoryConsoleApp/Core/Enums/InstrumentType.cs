@@ -8,7 +8,7 @@ namespace InventoryConsoleApp.Core.Enums
 
     public static class InstrumentTypeExtensions
     {
-        public static string ToString(this InstrumentType type)
+        public static string ToFriendlyString(this InstrumentType type)
         {
             return type switch
             {

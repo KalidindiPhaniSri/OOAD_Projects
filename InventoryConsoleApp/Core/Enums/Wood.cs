@@ -7,12 +7,14 @@ namespace InventoryConsoleApp.Core.Enums
         MAPLE,
         CEDAR,
         ALDAR,
-        SITKA
+        SITKA,
+        MAHOGANY,
+        ADIRONDACK
     }
 
     public static class WoodExtensions
     {
-        public static string ToString(this Wood wood)
+        public static string ToFriendlyString(this Wood wood)
         {
             return wood switch
             {
@@ -22,6 +24,8 @@ namespace InventoryConsoleApp.Core.Enums
                 Wood.CEDAR => "Cedar",
                 Wood.ALDAR => "Aldar",
                 Wood.SITKA => "Sitka",
+                Wood.MAHOGANY => "Mahogany",
+                Wood.ADIRONDACK => "Adirondack",
                 _ => "Unknown Wood"
             };
         }

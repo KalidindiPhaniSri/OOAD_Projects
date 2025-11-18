@@ -10,7 +10,7 @@ namespace InventoryConsoleApp.Core.Enums
 
     public static class BuilderExtentions
     {
-        public static string ToString(this Builder builder)
+        public static string ToFriendlyString(this Builder builder)
         {
             return builder switch
             {

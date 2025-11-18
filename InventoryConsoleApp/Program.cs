@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using InventoryConsoleApp.Core;
+
+namespace InventoryConsoleApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            InventoryManager.Start();
+        }
+    }
+}

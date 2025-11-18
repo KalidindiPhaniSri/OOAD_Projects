@@ -1,31 +1,13 @@
-using InventoryConsoleApp.BLL;
-
-namespace InventoryConsoleApp.Core
+namespace InventoryConsoleApp.BLL
 {
     public class Inventory()
     {
         private List<Instrument> _inventory =  [ ];
 
-        public void AddInstrument(Instrument instrument)
+        public void AddInstrument(string serialNumer, double price, InstrumentSpecs specs)
         {
-            if (instrument is Guitar g)
-            {
-                var newGuitar = new Guitar(
-                    g.GetSerialNumber(),
-                    g.GetPrice(),
-                    (GuitarSpecs)g.GetSpecs()
-                );
-                _inventory.Add(newGuitar);
-            }
-            else if (instrument is Mandolin m)
-            {
-                var newMandolin = new Mandolin(
-                    m.GetSerialNumber(),
-                    m.GetPrice(),
-                    (MandolinSpecs)m.GetSpecs()
-                );
-                _inventory.Add(newMandolin);
-            }
+            var instrument = new Instrument(serialNumer, price, specs);
+            _inventory.Add(instrument);
         }
 
         public Instrument? GetInstrument(string serialNumber)

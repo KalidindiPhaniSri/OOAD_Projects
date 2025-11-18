@@ -8,7 +8,7 @@ namespace InventoryConsoleApp.Core.Enums
 
     public static class StyleExtensions
     {
-        public static string ToString(this Style style)
+        public static string ToFriendlyString(this Style style)
         {
             return style switch
             {

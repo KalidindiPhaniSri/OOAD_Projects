@@ -2,57 +2,60 @@ using InventoryConsoleApp.Core.Enums;
 
 namespace InventoryConsoleApp.BLL
 {
-    public abstract class InstrumentSpecs(
-        string model,
-        Builder builder,
-        InstrumentType type,
-        Wood backwood,
-        Wood topwood
-    )
+    public class InstrumentSpecs(Dictionary<string, object> properties)
     {
-        private string _model = model;
-        private Builder _builder = builder;
-        private InstrumentType _type = type;
-        private Wood _backwood = backwood;
-        private Wood _topwood = topwood;
+        private Dictionary<string, object> _properties = new(properties);
 
-        public string GetModel()
+        private static string ConvertToString(object? value)
         {
-            return _model;
+            try
+            {
+                if (value == null)
+                    return string.Empty;
+                return value switch
+                {
+                    Builder b => b.ToFriendlyString(),
+                    InstrumentName n => n.ToFriendlyString(),
+                    InstrumentType t => t.ToFriendlyString(),
+                    Style s => s.ToFriendlyString(),
+                    Wood w => w.ToFriendlyString(),
+                    Enum e => e.ToString(),
+                    _ => Convert.ToString(value) ?? string.Empty
+                };
+            }
+            catch
+            {
+                return string.Empty;
+            }
         }
 
-        public string GetBuilder()
+        public object? GetProperty(string propertyName)
         {
-            return _builder.ToString();
+            _properties.TryGetValue(propertyName, out var value);
+            return value;
         }
 
-        public string GetInstrumentType()
+        public string GetStringValue(string propertyName)
         {
-            return _type.ToString();
+            _properties.TryGetValue(propertyName, out var value);
+            return ConvertToString(value);
         }
 
-        public string GetTopWood()
+        public Dictionary<string, object> GetAllProperties()
         {
-            return _backwood.ToString();
+            return _properties;
         }
 
-        public string GetBackWood()
+        public bool Matches(InstrumentSpecs otherSpecs)
         {
-            return _topwood.ToString();
-        }
+            foreach (var pair in otherSpecs.GetAllProperties())
+            {
+                if (!_properties.TryGetValue(pair.Key, out var value))
+                    return false;
 
-        public virtual bool Matches(InstrumentSpecs otherSpecs)
-        {
-            if (_builder != otherSpecs._builder)
-                return false;
-            if (!_model.Equals(otherSpecs._model))
-                return false;
-            if (_type != otherSpecs._type)
-                return false;
-            if (_backwood != otherSpecs._backwood)
-                return false;
-            if (_topwood != otherSpecs._topwood)
-                return false;
+                if (!ConvertToString(value).Equals(ConvertToString(pair.Value)))
+                    return false;
+            }
             return true;
         }
     }
