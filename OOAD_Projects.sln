@@ -5,9 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoorConsoleApp", "DogDoorConsoleApp\DogDoorConsoleApp.csproj", "{EFCA9498-CBBD-4128-BB9E-A1273912EC8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarConsoleApp", "GuitarConsoleApp\GuitarConsoleApp.csproj", "{3F995133-CB00-4D00-8B29-2D0083ED737C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryConsoleApp", "InventoryConsoleApp\InventoryConsoleApp.csproj", "{C605AD8D-B2F1-48C1-BB76-22C71F681478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGameFramework", "WarGameFramework\WarGameFramework.csproj", "{F83A0650-1B1C-4605-803F-A1B4E01BF117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarGameFramework.Tests", "WarGameFramework.Tests\WarGameFramework.Tests.csproj", "{C4C00A4C-7F15-4C0E-85E0-53DC0B5B1AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectVilleRouteFinder", "ObjectVilleRouteFinder\ObjectVilleRouteFinder.csproj", "{9FE90CBE-C28D-4884-8D9C-2302AD6C287D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +34,17 @@ Global
 		{C605AD8D-B2F1-48C1-BB76-22C71F681478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C605AD8D-B2F1-48C1-BB76-22C71F681478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C605AD8D-B2F1-48C1-BB76-22C71F681478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83A0650-1B1C-4605-803F-A1B4E01BF117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83A0650-1B1C-4605-803F-A1B4E01BF117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83A0650-1B1C-4605-803F-A1B4E01BF117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83A0650-1B1C-4605-803F-A1B4E01BF117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C00A4C-7F15-4C0E-85E0-53DC0B5B1AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C00A4C-7F15-4C0E-85E0-53DC0B5B1AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C00A4C-7F15-4C0E-85E0-53DC0B5B1AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C00A4C-7F15-4C0E-85E0-53DC0B5B1AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE90CBE-C28D-4884-8D9C-2302AD6C287D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE90CBE-C28D-4884-8D9C-2302AD6C287D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE90CBE-C28D-4884-8D9C-2302AD6C287D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE90CBE-C28D-4884-8D9C-2302AD6C287D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
